@@ -1,4 +1,12 @@
 
+var CATS = [
+      {type:"cat", name:"Rupert", favouriteFood: "people", img: "lion-hug.jpg"},
+      {type:"cat", name:"Wild", favouriteFood: "fish", img: "wild-cat.jpg"},
+      {type: "cat", name:"Baba", favouriteFood: "sock fluff", img: "http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg"},
+      {type: "cat", name:"Barnaby" ,favouriteFood: "tuna", img: "lion-meat.jpg" },
+      {type: "cat", name: "Max" ,favouriteFood: "whiskas temptations", img: "http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg" },
+      
+];
 
 
 var createul = function(type){
@@ -25,7 +33,6 @@ var createli_3 = function(){
   return li_3;
 }
 
-
 var createimg = function(image){
   var img = document.createElement('img');
   img.src = image;
@@ -45,12 +52,12 @@ var appendElements = function(ul, li_1, li_2, li_3, img){
 
 }
 
-var addCat = function(type, name, favouriteFood, image){
-  var ul = createul(type);
-  var li_1 = createli_1(name);
-  var li_2 = createli_2(favouriteFood);
+var addCat = function(cat){
+  var ul = createul(cat.type);
+  var li_1 = createli_1(cat.name);
+  var li_2 = createli_2(cat.favouriteFood);
   var li_3 = createli_3();
-  var img = createimg(image);
+  var img = createimg(cat.img);
   appendElements(ul, li_1, li_2, li_3, img)
 }
 
@@ -58,11 +65,16 @@ var addCat = function(type, name, favouriteFood, image){
 
 var app = function(){
 
-addCat("cat", "Rupert", "people", "lion-hug.jpg");
-addCat("cat", "Wild", "fish", "wild-cat.jpg");
-addCat("cat", "Baba", "sock fluff", "http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg");
-addCat("cat", "Barnaby", "tuna", "lion-meat.jpg");
-addCat("cat", "Max", "whiskas temptations", "http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg");
+for (var i = 0; i < CATS.length; i++){
+  addCat(CATS[i]);
+}
+
+
+// addCat("cat", "Rupert", "people", "lion-hug.jpg");
+// addCat("cat", "Wild", "fish", "wild-cat.jpg");
+// addCat("cat", "Baba", "sock fluff", "http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg");
+// addCat("cat", "Barnaby", "tuna", "lion-meat.jpg");
+// addCat("cat", "Max", "whiskas temptations", "http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg");
 
 
 //working appending of cat
