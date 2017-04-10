@@ -58,7 +58,12 @@ var addCat = function(type, name, favouriteFood, image){
 
 var app = function(){
 
-addCat("cat", "Rupert", "people", "lion-hug.jpg")
+addCat("cat", "Rupert", "people", "lion-hug.jpg");
+addCat("cat", "Wild", "fish", "wild-cat.jpg");
+addCat("cat", "Baba", "sock fluff", "http://66.media.tumblr.com/d1f01bbe0150fda0c40d2151c5eaeac8/tumblr_odlqqskjj61v9cejwo1_400.jpg");
+addCat("cat", "Barnaby", "tuna", "lion-meat.jpg");
+addCat("cat", "Max", "whiskas temptations", "http://66.media.tumblr.com/7c5784ea89369c780e782bf10c60315a/tumblr_npb0hlYwhV1u63jaco1_1280.jpg");
+
 
 //working appending of cat
 
