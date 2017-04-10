@@ -67,6 +67,7 @@ var app = function(){
 
 for (var i = 0; i < CATS.length; i++){
   addCat(CATS[i]);
+  
 }
 
 
