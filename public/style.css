@@ -11,19 +11,26 @@ h1 {
   opacity: .5;
 }
 
-.cat img{
+.cat img {
 display: block;
 margin: auto;
 padding-top:10px;
 padding-bottom: 40px;
 }
 
-ul{
+ul {
   list-style: none;
+  padding-left: none;
 }
 
-.cat li{
+.cat li {
   font-size: 22px;
   text-align: center;
   color: grey;
+  display: block;
+}
+
+.cat {
+  list-style:none;
+  padding-left:0;
 }
